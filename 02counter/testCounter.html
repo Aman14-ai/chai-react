@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+
+            -webkit-user-select: none;
+            /* Safari */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* IE/Edge */
+            user-select: none;
+            /* Standard syntax */
+
+        }
+
+        /* Styling for the <h1> element */
+        h1 {
+            color: #4CAF50;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            user-select: text;
+        }
+
+        /* Styling for the <h3> element */
+        h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* Styling for the counter value */
+        #ans {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* General button styling */
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for buttons */
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Active effect for buttons */
+        button:active {
+            background-color: #3e8e41;
+        }
+
+        /* Focus effect for buttons */
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 8px 3px rgba(72, 207, 173, 0.5);
+        }
+
+        /* Specific styling for the increment button */
+        #increment {
+            background-color: #2196F3;
+            /* Blue */
+        }
+
+        #increment:hover {
+            background-color: #1e88e5;
+            /* Darker blue */
+        }
+
+        /* Specific styling for the decrement button */
+        #decrement {
+            background-color: #f44336;
+            /* Red */
+        }
+
+        #decrement:hover {
+            background-color: #e53935;
+            /* Darker red */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Radha</h1>
+    <h3>Counter value: <span id="ans"></span></h3>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+    <script>
+        let count = 5;
+        const ans = document.querySelector('#ans'); ans.innerText = count;
+        document.querySelector('#increment').addEventListener('click', (e) => {
+            if (count < 20) { count = count + 1; }
+            ans.innerText = count;
+            console.log(count)
+        })
+        document.querySelector('#decrement').addEventListener('click', (e) => {
+            if (count > 0) { count = count - 1; }
+            ans.innerText = count;
+            console.log(count)
+        })
+
+    </script>
+</body>
+
+</html>
